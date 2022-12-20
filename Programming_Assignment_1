@@ -16,3 +16,25 @@ print(result_div)
 
 print( num1 / num2)
 
+# Write a Python program to find the area of a triangle?
+
+height = int(input("Enter height of the triangle: "))
+base = int(input("Enter base of the triangle: "))
+area = (height*base)/2
+print(area)
+
+# Write a Python program to swap two variables?
+
+num1 = 10
+num2 =15
+print(f"Before Swap: {num1} and {num2}".format(num1,num2))
+swap = num2
+num2 = num1
+num1 = swap
+print(f"After swap: {num1} and {num2}".format(num1, num2))
+
+# Write a Python program to generate a random number?
+
+import random
+print(random.random())
+print(random.randint(0,10000))
