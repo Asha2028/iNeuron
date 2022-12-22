@@ -35,3 +35,28 @@ if n == str(sum):
     print("Armstrong Number.")
 else:
     print("NOT Armsstrong Number.")
+
+#5. Write a Python Program to Find Armstrong Number in an Interval?
+
+lower_index = int(input("Enter the lower index: "))
+higher_index = int(input("Enter the higher index: "))
+
+for n in range(lower_index,higher_index):
+    sum = 0
+    num = str(n)
+    length = len(num)
+    for i in range(0,length):
+        # sum += pow(int(num[i]),length)
+        sum += int(num[i]) ** int(length)
+    if (sum == int(num)):
+        print(n)
+        
+#6. Write a Python Program to Find the Sum of Natural Numbers?
+
+lower_index = int(input("Enter the lower index: "))
+higher_index = int(input("Enter the higher index: "))
+sum = 0
+for i in range(lower_index, higher_index):
+    sum += i
+
+print(sum)
