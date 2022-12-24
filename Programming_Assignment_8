@@ -48,3 +48,46 @@ def n_largest(l,position):
 l = [2, 0, 1, 1235, 6, -7123]
 position = int(input("Enter the position: "))
 print(n_largest(l, position))
+
+#7. Write a Python program to print even numbers in a list?
+
+l = [2, 0, 1, 1235, 6, -7123, 21, 54, 12, -23, -42]
+# for i in l:
+#     if i%2 ==0:
+#         print(i)
+res = [ i for i in l if i%2 == 0]
+print(res)
+
+#8. Write a Python program to print odd numbers in a List?
+# for i in l:
+#     if i%2 !=0:
+#         print(i)
+res = [i for i in l if i%2!=0]
+print(res)
+
+#9. Write a Python program to Remove empty List from List?
+l = [[], 12, 31, [1,2, -23] , [1], [], [123.23], [], 2, 321]
+res = [ele for ele in l if ele != []]
+print(res)
+
+#10. Write a Python program to Cloning or Copying a list?
+list1 = [2,1, 31, 3, 412, 3, 4667, [2,3,1]]
+list2 = []
+
+for i in list1:
+    list2.append(i)
+
+print(list2)
+
+#11. Write a Python program to Count occurrences of an element in a list?
+
+def concurrence(l,n):
+    count = 0
+    for i in l:
+        if i == n:
+            count +=1
+    return count
+
+l =[1, 1, 1, 2, 3, 4, 5, 2]
+n = int(input("Enter the number: "))
+print(concurrence(l, n))
