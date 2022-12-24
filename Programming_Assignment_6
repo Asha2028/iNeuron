@@ -24,3 +24,16 @@ def bmi(height, weight):
     return (weight/(height**2))
 
 print(bmi(1.8,70))
+
+#4. Write a Python Program to calculate the natural logarithm of any number?
+import math
+
+# n = int(input("Enter number: "))
+# print(math.log(n))
+
+try:
+    num = int(input("Enter the number: "))
+except Exception as e:
+    print(e)
+else:
+    print(math.log(num))
