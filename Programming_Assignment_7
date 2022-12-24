@@ -1,0 +1,57 @@
+# 1. Write a Python Program to find sum of array?
+l = [1,2,3,-412, 123, 369, 111]
+length = len(l)
+# print(length)
+sum = 0 
+for i in range(0,length):
+    sum += l[i]
+print("Sum of the array: ",sum)
+
+# 2. Write a Python Program to find largest element in an array?
+l = [1,2,3,-412, 123, 369, 111]
+# print(max(l))
+array_max = -9999999999999
+for i in l:
+    if i > array_max:
+        array_max = i
+
+print(array_max)
+
+# 3. Write a Python Program for array rotation?
+l = [1,2,3,-412, 123, 369, 111]
+
+print(l[::-1])
+
+# 4. Write a Python Program to Split the array and add the first part to the end?
+l = [1,2,3,-412, 123, 369, 111]
+position = int(input("Enter the position of the array to be splitted: "))
+
+def split_arr(arr,position):
+    new_arr = []
+    out_arr = []
+    for i in range(0,3):
+        new_arr.append(l[i])
+    length_out_arr = len(l) - len(new_arr)
+    for i in range(length_out_arr-1,len(l)):
+        out_arr.append(l[i])
+    for j in range(len(new_arr)):
+        out_arr.append(new_arr[j])
+    return out_arr
+
+print(split_arr(l, position))
+
+#5. Write a Python Program to check if given array is Monotonic?
+
+# def monotone_array(array):
+# l = [1,2,3,-412, 123, 369, 111]
+# l =[1,2,3,56, 124, 369]
+l = [123,-23, 783, -98,0, 12]
+x, y = [] , []
+x.extend(l)
+y.extend(l)
+x.sort()
+y.sort(reverse=True)
+if (x == l or y == l):
+    print("Array is Monotic")
+else:
+    print("Array is not Monotic")
