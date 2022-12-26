@@ -1,93 +1,73 @@
-#1. Write a Python program to find sum of elements in list?
-l = [2, 4, 1, 5, 6, 7]
-sum = 0
-for i in l:
-    sum += i
-print(sum)
+#1. Write a Python Program to Add Two Matrices?
+mat1 = [ [1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
 
-#2. Write a Python program to Multiply all numbers in the list?
+mat2 = [ [1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
 
-l = [2, 4, 1, 5, 6, 7]
-prod = 1
-for i in l:
-    prod *= i
-print(prod)
+result = []
 
-#3. Write a Python program to find smallest number in a list?
-l = [2, 0, 1, 1235, 6, -7123]
-# print(min(l))
-minimum = l[0]
-for i in l:
-    if i < minimum:
-        minimum = i
+for i in range(len(mat1)):
+    row = []
+    for j in range(len(mat1)):
+        row.append(mat1[i][j]+mat2[i][j])
+    result.append(row)
 
-print(minimum)
+print(result)
 
-# 4. Write a Python program to find largest number in a list?
-l = [2, 0, 1, 1235, 6, -7123]
-# print(min(l))
-maximum = l[0]
-for i in l:
-    if i > maximum:
-        maximum = i
+#2. Write a Python Program to Multiply Two Matrices?
+mat1 = [ [1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
 
-print(maximum)
+mat2 = [ [1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]]
 
-#5. Write a Python program to find second largest number in a list?
+result = []
 
-l = [2, 0, 1, 1235, 6, -7123]
-l.sort(reverse = True)
-print(l)
-print(l[1])
+for i in range(len(mat1)):
+    row = []
+    for j in range(len(mat1)):
+        row.append(mat1[i][j]*mat2[i][j])
+    result.append(row)
 
-#6. Write a Python program to find N largest elements from a list?
+print(result)
 
-def n_largest(l,position):
-    l.sort(reverse = True)
-    return l[position]
-l = [2, 0, 1, 1235, 6, -7123]
-position = int(input("Enter the position: "))
-print(n_largest(l, position))
+#3. Write a Python Program to Transpose a Matrix?
 
-#7. Write a Python program to print even numbers in a list?
+mat1 = [[1, 2, 3],
+        [4, 5, 6]]
+result = [[0, 0],
+          [0, 0],
+          [0, 0]]
 
-l = [2, 0, 1, 1235, 6, -7123, 21, 54, 12, -23, -42]
-# for i in l:
-#     if i%2 ==0:
-#         print(i)
-res = [ i for i in l if i%2 == 0]
-print(res)
+for i in range(len(mat1)):
+    for j in range(len(mat1[0])):
+        result[j][i] = mat1 [i][j]
 
-#8. Write a Python program to print odd numbers in a List?
-# for i in l:
-#     if i%2 !=0:
-#         print(i)
-res = [i for i in l if i%2!=0]
-print(res)
+for i in result:
+    print(i)
 
-#9. Write a Python program to Remove empty List from List?
-l = [[], 12, 31, [1,2, -23] , [1], [], [123.23], [], 2, 321]
-res = [ele for ele in l if ele != []]
-print(res)
+#4. Write a Python Program to Sort Words in Alphabetic Order?
 
-#10. Write a Python program to Cloning or Copying a list?
-list1 = [2,1, 31, 3, 412, 3, 4667, [2,3,1]]
-list2 = []
+sentence = input("Enter the words: ")
+word = [word.lower() for word in sentence.split()]
+# print(word)
+word.sort() 
+for word in word:
+    print(word, end = ' ')
 
-for i in list1:
-    list2.append(i)
+#5. Write a Python Program to Remove Punctuation From a String?
+punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
 
-print(list2)
+string = input("Enter the string: ")
 
-#11. Write a Python program to Count occurrences of an element in a list?
+outputString = ""
+for char in string:
+    if char not in punctuations:
+        outputString += char
 
-def concurrence(l,n):
-    count = 0
-    for i in l:
-        if i == n:
-            count +=1
-    return count
-
-l =[1, 1, 1, 2, 3, 4, 5, 2]
-n = int(input("Enter the number: "))
-print(concurrence(l, n))
+print(outputString)
