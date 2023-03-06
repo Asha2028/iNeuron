@@ -1,0 +1,77 @@
+ # # 1. Write a Python program to find words which are greater than given length k?
+
+word_length = int(input("Enther the length of the word: "))
+sentence = input("Enter the word: ")
+word = [word for word in sentence.split()]
+output = []
+for w in word:
+    length = len(w)
+    if length > word_length:
+        output.append(w)
+
+print(output)
+
+# #2. Write a Python program for removing i-th character from a string?
+
+string = input("Enter the string: ")
+i = int(input("Enter the position of the string: "))
+print(string[:i]+''+string[i+1:])
+
+#3. Write a Python program to split and join a string?
+string = input("Enter the string: ")
+print(string.split())
+print(''.join(string))
+
+#4. Write a Python to check if a given string is binary string or not?
+string = input("Enter the string: ")
+binary = ['0', '1']
+
+is_bin = True
+for i in string:
+  if i not in binary:
+    is_bin = False
+
+if is_bin:
+  print("Binary")
+else:
+  print("Not binary")
+
+# 5. Write a Python program to find uncommon words from two Strings?
+def uncommon(s1,s2):
+    s1 = s1.split()
+    s2 = s2.split()
+    s = []
+    for i in s1:
+        if i not in s2:
+            s.append(i)
+    for i in s2:
+        if i not in s1:
+            s.append(i)
+    return s
+
+s1 = input("Enter string 1: ")
+s2 = input("Enter string 2: ")
+print(uncommon(s1, s2))
+
+# 6. Write a Python to find all duplicate characters in string?
+
+def dup(s):
+    duplicate = []
+    for i in s:
+        if s.count(i) > 1:
+            duplicate.append(i)
+            
+    return set(duplicate)
+s = input("Enter the string: ")
+print(dup(s))
+
+# 7. Write a Python Program to check if a string contains any special character?
+import re
+
+s = input("Enter the string: ")
+regex = re.compile("[@_!#$%^&*()<>?/\|}{~:]")
+
+if (regex.search(s) == None):
+    print("Given string doesn't contain any special character.")
+else:
+    print("Given string contains special character.")
